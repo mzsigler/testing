@@ -12,7 +12,7 @@ body {
 
 .wrapper {
     width: 95vw;
-    height: 80vh;
+    min-height: 80vh;
     border: 1px solid white;
     display: grid;
     padding: 5px;
