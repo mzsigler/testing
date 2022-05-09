@@ -1,9 +1,13 @@
 :root {
     font-size: 20px;
-    background: linear-gradient(to right, pink, purple)
+    --myBlue: #2ff3e0;
+    --myGold: #F8D210;
+    --myPink: #FA26A0;
+    --myRed: #F51720;
 }
 
 body {
+    background: linear-gradient(to right, var(--myRed), var(--myGold));
     display: grid;
     gap: 10px;
     justify-content: center;
@@ -17,7 +21,7 @@ body {
     display: grid;
     padding: 5px;
     grid-template-areas: 
-    "header header header header header"
+    "sidebar header header header header"
     "sidebar content content content content"
     "sidebar content content content content"
     "sidebar content content content content"
@@ -36,21 +40,18 @@ body {
 
 .header-button {
     color: white;
-    background-color: fuchsia;
+    background-color: var(--myPink);
 }
 
 .sidebar {
     grid-area: sidebar;
-    /* display: flex;
-    flex-direction: column;
-    justify-content: space-around; */
     display: grid;
     grid-template-columns: 1fr;
     gap: 20px;
 }
 
 .sidebar-card {
-    background: blue; 
+    background: var(--myGold); 
     min-height: 100px;
     text-align: center;
 }
@@ -63,7 +64,7 @@ body {
 }
 
 .content-card {
-    background-color: red;
+    background-color: var(--myRed);
     display: grid;
     grid-template-columns: 1fr;
 }
