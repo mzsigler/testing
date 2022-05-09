@@ -1,0 +1,97 @@
+:root {
+    font-size: 20px;
+    background: linear-gradient(to right, pink, purple)
+}
+
+body {
+    display: grid;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper {
+    width: 95vw;
+    height: 80vh;
+    border: 1px solid white;
+    display: grid;
+    padding: 5px;
+    grid-template-areas: 
+    "header header header header header"
+    "sidebar content content content content"
+    "sidebar content content content content"
+    "sidebar content content content content"
+    ;
+    grid-template-rows: 100px auto;
+    grid-template-columns: 200px auto;
+    gap: 10px;
+}
+
+.header {
+    grid-area: header;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.header-button {
+    color: white;
+    background-color: fuchsia;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: space-around; */
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.sidebar-card {
+    background: blue; 
+    min-height: 100px;
+    text-align: center;
+}
+
+.content {
+    grid-area: content;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.content-card {
+    background-color: red;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.card-background {
+    background: white;
+    margin: 6px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-background > p {
+    padding: 5px;
+    text-align: center;
+}
+
+.card-background > .material-symbols-outlined {
+    font-size: 30px;
+    padding: 5px;
+}
+
+@media (max-width: 700px) {
+    .wrapper {
+        grid-template-areas: 
+        "header"
+        "sidebar"
+        "content";
+    }
+}
