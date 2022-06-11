@@ -1,121 +1,109 @@
 :root {
-    font-size: 24px;
-    --myBlue: #2ff3e0;
-    --myGold: #F8D210;
-    --myPink: #FA26A0;
-    --myRed: #F51720;
-}
-
-.material-symbols-outlined {
-    display: inline-flex;
-    vertical-align: text-bottom;
+    font-size: 20px;
 }
 
 body {
-    background: linear-gradient(to right, var(--myRed), var(--myGold));
     display: grid;
-    gap: 10px;
-    justify-content: center;
-    align-items: center;
+    grid-template-columns: 1fr;
 }
+
 
 .wrapper {
-    width: 95vw;
-    min-height: 80vh;
-    border: 1px solid white;
+    justify-self: center;
+    width: 75vw;
+    height: auto;
     display: grid;
-    padding: 5px;
-    grid-template-areas: 
-    "sidebar header header header header"
-    "sidebar content content content content"
-    "sidebar content content content content"
-    "sidebar content content content content"
-    ;
-    grid-template-rows: 100px auto;
-    grid-template-columns: 200px auto;
-    gap: 5px;
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
 }
 
-.header {
-    grid-area: header;
+.car-adder {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 5px;
+    grid-template-columns: 1fr;
+    padding: 20px;
+    gap: 16px;
+    align-content: center;
+    justify-items: center;
 }
 
-.header-button {
+.car-adder-submit {
+    border: 1px solid grey;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+input {
+    width: 200px;
+}
+
+form>button {
+    width: 100px;
+    padding: 10px;
+}
+
+.display-buttons {
+    display: flex;
+    justify-content: space-around;
+    padding: 16px;
+}
+
+.display-buttons>button {
+    padding: 10px;
+    border: 1px solid grey;
+    border-radius: 10px;
+}
+
+button:hover {
+    background: aqua;
     color: white;
-    background-color: var(--myPink);
 }
 
-.sidebar {
-    grid-area: sidebar;
+.display-cars {
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 100px auto;
-    gap: 8px;
-}
-
-.sidebar-card {
-    background: var(--myGold); 
-    min-height: 100px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-}
-
-.content {
-    grid-area: content;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 5px;
-}
-
-.content-card {
-    background-color: var(--myRed);
-    display: grid;
-    grid-template-columns: 1fr;
-}
-
-.card-background {
-    background: white;
-    margin: 3px;
-    display: flex;
-    flex-direction: column;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     align-items: center;
     justify-content: center;
 }
 
-.card-background > p {
-    padding: 5px;
+
+.carCard {
+    outline: 2px solid blue;
+    border-radius: 10px;
+    background: linear-gradient(to right, white, aqua);
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    padding: 10px;
+    margin: 10px;
+}
+
+.table-buttons {
+    display: flex;
+    justify-content: space-around;
+    padding: 8px;
+    border-radius: 10px;
+}
+
+.hide-table {
+    width: 100px;
+    padding: 10px;
+}
+
+.show-table {
+    width: 100px;
+    padding: 10px;
+}
+
+table.oilTable {
+    align-self: center;
     text-align: center;
+    padding: 10px;
+    border: 1px solid black;
+    width: 75vw;
 }
 
-.card-background > .material-symbols-outlined {
-    font-size: 30px;
-    padding: 5px;
-}
-
-@media (max-width: 900px) {
-    .wrapper {
-        grid-template-areas: 
-        "header header"
-        "sidebar sidebar"
-        "content content";
-        grid-template-columns: auto;
-        grid-template-rows: auto;
-    }
-}
-
-@media (max-width: 700px) {
-    .wrapper {
-        grid-template-areas: 
-        "header"
-        "sidebar"
-        "content";
-        grid-template-columns: auto;
-        grid-template-rows: auto;
-    }
+table.oilTable.hidden {
+    opacity: 0;
 }

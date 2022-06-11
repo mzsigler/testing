@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="maintenance.js" defer></script>
+    <link rel="stylesheet" href="maint.css">
+    <title>Vehicle Management</title>
+</head>
+
+<body>
+
+    <div class="navbar">
+        <button class="add-car">Add Car</button>
+        <button class="maint">Maintenance Info</button>
+        <button class="info">Car Info</button>
+    </div>
+
+    <div class="info-search hidden">
+        <header>
+            <h1>Express Inventory</h1>
+        </header>
+        <form action="search" name="searchBox">
+            <label for="info-search" name="info-search">Search by Inv</label>
+            <input type="text" name="info-search" id="info-search">
+            <button type="submit" class="info-search-submit">Search</button>
+        </form>
+
+    </div>
+
+    <div class="maint-search hidden">
+        <header>
+            <h1>Express Maintenance</h1>
+        </header>
+        <form action="search" name="searchBox">
+            <label for="inv-search" name="inv-search">Search by Inv</label>
+            <input type="text" name="inv-search" id="inv-search">
+            <button type="submit" class="search-submit">Search</button>
+        </form>
+    </div>
+
+    <div class="results">
+
+    </div>
+</body>
+
+</html>

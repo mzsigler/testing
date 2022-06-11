@@ -1,0 +1,60 @@
+:root {
+    font-size: 20px;
+}
+
+body {
+    background: linear-gradient(to left, white, aqua);
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+}
+
+.navbar {
+    padding: 1rem;
+    display: flex;
+    justify-content: space-around;
+    min-width: 500px;
+}
+
+.navbar>button {
+    padding: 0.5rem;
+}
+
+header {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+}
+
+.hidden {
+    display: none;
+}
+
+form {
+    padding: 1rem;
+}
+
+
+table {
+    transition: all 2s;
+    transform: rotate(180);
+    border: 1px solid black;
+    padding: .5rem;
+    background: lightblue;
+}
+
+
+tr {
+    border: 1px solid black;
+}
+
+td {
+    padding: 1rem;
+    text-align: center;
+
+}
+
+th {
+    padding: 1rem;
+    border: 1px solid black;
+}
